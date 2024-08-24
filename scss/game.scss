@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+body {
+    background-image: url('../game/assets/game_bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    color: white;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+button{
+    cursor: pointer;
+}
+
+.opponent {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    transform: translateX(-10%);
+    
+    .opponent_hands {
+        transform: rotateY(180deg);
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        position: relative;
+
+        img {
+            transform: rotateX(180deg);
+            height: 45%;
+            transition: .3s ease-out;
+            transform: translateY(-100%) rotateX(180deg);
+        }
+
+        .opponent_paper{
+            display: none;
+        }
+
+        .opponent_rock{
+            display: none;
+        }
+
+        .opponent_scissor{
+            display: none;
+        }
+    }
+}
+
+.player {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-40%);
+
+    .player_hands {
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        position: relative;
+
+        img {
+            height: 45%;
+            transition: .3s ease-out;
+            transform: translateY(100%);
+        }
+
+        .player_paper{
+            display: none;
+        }
+
+        .player_rock{
+            display: none;
+        }
+
+        .player_scissor{
+            display: none;
+        }
+    }
+
+    .player_btns{
+        display: flex;
+        position: absolute;
+        gap: 10px;
+        margin-bottom: 2px;
+
+        button{
+            padding: 20px 40px;
+            border: none;
+            width: 100%;
+            border-radius: 8px;
+            background: #2563eb;
+            color: white;
+            font-size: 18px;
+            transition: .2s ease-in-out;
+    
+            &:hover{
+                background: #1d4ed8;
+            }
+    
+            &:active{
+                transform: scale(0.95);
+            }
+        }
+    }
+}

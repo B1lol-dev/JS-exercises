@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: cursive;
+}
+
+body {
+  background-image: url("../game/assets/game_bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  color: white;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+button {
+  cursor: pointer;
+}
+
+.opponent {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  transform: translateX(-10%);
+}
+.opponent .opponent_hands {
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  position: relative;
+}
+.opponent .opponent_hands img {
+  transform: rotateX(180deg);
+  height: 45%;
+  transition: 0.3s ease-out;
+  transform: translateY(-100%) rotateX(180deg);
+}
+.opponent .opponent_hands .opponent_paper {
+  display: none;
+}
+.opponent .opponent_hands .opponent_rock {
+  display: none;
+}
+.opponent .opponent_hands .opponent_scissor {
+  display: none;
+}
+
+.player {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-40%);
+}
+.player .player_hands {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  position: relative;
+}
+.player .player_hands img {
+  height: 45%;
+  transition: 0.3s ease-out;
+  transform: translateY(100%);
+}
+.player .player_hands .player_paper {
+  display: none;
+}
+.player .player_hands .player_rock {
+  display: none;
+}
+.player .player_hands .player_scissor {
+  display: none;
+}
+.player .player_btns {
+  display: flex;
+  position: absolute;
+  gap: 10px;
+  margin-bottom: 2px;
+}
+.player .player_btns button {
+  padding: 20px 40px;
+  border: none;
+  width: 100%;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-size: 18px;
+  transition: 0.2s ease-in-out;
+}
+.player .player_btns button:hover {
+  background: #1d4ed8;
+}
+.player .player_btns button:active {
+  transform: scale(0.95);
+}/*# sourceMappingURL=game.css.map */
